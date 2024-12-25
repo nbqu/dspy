@@ -145,7 +145,7 @@ def format_fields(fields_with_values: Dict[FieldInfoWithName, Any], assume_text=
 
 def parse_value(value, annotation):
     if annotation is str:
-        return str(value)
+        return str(value).replace('«', '').replace('»', '')
 
     parsed_value = value
 
